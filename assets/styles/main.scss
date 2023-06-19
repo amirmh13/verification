@@ -1,0 +1,17 @@
+@import "/assets/styles/variables.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.v-application {
+  font-family: $font-family !important;
+  background-color: $bg-color !important;
+}
+
+body {
+  & * {
+    font-family: $font-family !important;
+    direction: rtl;
+  }
+}
