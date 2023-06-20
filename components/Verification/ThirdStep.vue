@@ -59,14 +59,14 @@ const verificationBankCardFormEntities = ref<
   },
 ]);
 
-const { uploadIdentityCard } = useVerification();
+const { setBankCardInfo } = useVerification();
 const { showSnackbar } = useVerificationStore();
 
 const setBankCard = async () => {
   if (!formIsValidate.value) return;
 
   try {
-    await uploadIdentityCard();
+    await setBankCardInfo();
 
     showSnackbar();
   } catch (error) {

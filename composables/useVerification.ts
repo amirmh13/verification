@@ -9,8 +9,14 @@ export const useVerification = () => {
     const uploadIdentityCard = async () => {
         return new Promise((resolve, _) => {
             setTimeout(() => resolve('عملیات با موفقیت انجام شد'), 2000);
-        }) 
+        })
     }
 
-    return { setVerificationPersonalInfo, uploadIdentityCard }
+    const setBankCardInfo = async () => {
+        return new Promise((resolve, _) => {
+            setTimeout(() => resolve('عملیات با موفقیت انجام شد'), 2000);
+        })
+    }
+
+    return { setVerificationPersonalInfo, uploadIdentityCard, setBankCardInfo }
 }
