@@ -31,21 +31,37 @@ export function required() {
   };
 }
 
+/**
+ * Iranian national code rule
+ * @returns {Function} a function which vuetify accepts that
+ */
 export function nationalCode() {
   return (value) => {
     return verifyIranianNationalId(value) || "فرمت کد ملی اشتباه است";
   };
 }
 
+/**
+ * User mobile number rule
+ * @returns {Function} a function which vuetify accepts that
+ */
 export function phoneNumber() {
   return (value) =>
     phoneNumberValidator(value) || "فرمت شماره موبایل اشتباه است";
 }
 
+/**
+ * User sheba number rule
+ * @returns {Function} a function which vuetify accepts that
+ */
 export function shebaNumber() {
   return (value) => isShebaValid(value) || "شماره شبا معتبر نیست";
 }
 
+/**
+ * User bank card format rule
+ * @returns {Function} a function which vuetify accepts that
+ */
 export function bankCardNumber() {
   return (value) => verifyCardNumber(value) || "شماره کارت معتبر نیست";
 }
