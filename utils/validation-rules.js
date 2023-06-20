@@ -1,6 +1,8 @@
 import {
   verifyIranianNationalId,
   phoneNumberValidator,
+  isShebaValid,
+  verifyCardNumber,
 } from "@persian-tools/persian-tools";
 
 /**
@@ -36,9 +38,16 @@ export function nationalCode() {
 }
 
 export function phoneNumber() {
-  return (value) => {
-    return phoneNumberValidator(value) || "فرمت شماره موبایل اشتباه است";
-  };
+  return (value) =>
+    phoneNumberValidator(value) || "فرمت شماره موبایل اشتباه است";
+}
+
+export function shebaNumber() {
+  return (value) => isShebaValid(value) || "شماره شبا معتبر نیست";
+}
+
+export function bankCardNumber() {
+  return (value) => verifyCardNumber(value) || "شماره کارت معتبر نیست";
 }
 
 /**

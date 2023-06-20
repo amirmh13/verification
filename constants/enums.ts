@@ -1,4 +1,5 @@
 export enum FormStep {
     firstStep,
-    secondStep
+    secondStep,
+    thirdStep
 }
